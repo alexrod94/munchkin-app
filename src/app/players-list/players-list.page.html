@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <img src="/assets/images/header.jpg" alt="Header">
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div class="ion-padding">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card *ngFor="let avatar of avatarsList; let i=index">  
+            <ion-card-content>Nombre: {{ avatar.name }}</ion-card-content>
+            <ion-card-content>Vida: {{ avatar.life }}</ion-card-content>
+            <ion-card-content>Fuerza: {{ avatar.strength }}</ion-card-content>
+            <ion-card-content>Nivel: {{ avatar.level }}</ion-card-content>
+            <ion-button color="primary" expand="block" (click)="modify(i)">Modificar</ion-button>
+              </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-content>

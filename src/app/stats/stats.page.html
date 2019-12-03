@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <img src="/assets/images/header.jpg" alt="Header">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ avatar.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="player">
+          <div>
+            <ion-button color="danger" size="small" slot="start" (click)="levelDown()">-</ion-button>
+            Nivel: {{ avatar.level }}
+            <ion-button color="secondary" size="small" slot="end" (click)="levelUp()">+</ion-button>
+          </div>
+          <div>
+            <ion-button color="danger" size="small" slot="start" (click)="lifeDown()">-</ion-button>
+            Vida: {{ avatar.life }}
+            <ion-button color="secondary" size="small" slot="end" (click)="lifeUp()">+</ion-button>
+          </div>
+          <div>
+            <ion-button color="danger" size="small" slot="start" (click)="strengthDown()">-</ion-button>
+            Fuerza: {{ avatar.strength }}
+            <ion-button color="secondary" size="small" slot="end" (click)="strengthUp()">+</ion-button>
+          </div>
+        </div>
+        <ion-button expand="block" (click)="goBack()">Volver a la partida</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
